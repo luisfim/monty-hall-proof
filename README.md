@@ -66,46 +66,6 @@ The host's knowledge is the important detail. The host is not opening a random d
 
 Another way to visualize it is to imagine 100 doors. You choose one, with only a 1% chance of being correct. The host then opens 98 losing doors and leaves your door plus one other door closed. Your first door does not suddenly become a 50% choice; it is still the unlikely 1% choice. The other closed door carries the remaining 99% chance.
 
-## What the program does
-
-For every trial, the program:
-
-1. Places the prize behind a random door.
-2. Makes a random initial player choice.
-3. Makes the host open a valid goat door.
-4. Evaluates the result if the player stays.
-5. Evaluates the result if the player switches.
-
-The same randomized trials are used for both strategies. Therefore, entering `100` means:
-
-- 100 outcomes for always staying
-- 100 outcomes for always switching
-- 200 strategy outcomes in total
-
-The report displays:
-
-- Correct and incorrect initial choices
-- Wins and losses for each strategy
-- Win percentages
-- ASCII comparison bars
-- The difference in percentage points
-- The ratio between the two observed win rates
-- The theoretical values of 33.33% and 66.67%
-
-Small samples can vary considerably. With tens of thousands or millions of trials, the observed results should move increasingly close to the theoretical probabilities.
-
-## Important assumptions
-
-The result depends on the standard rules of the puzzle:
-
-1. The host knows where the prize is.
-2. The host always opens a door the player did not choose.
-3. The host always reveals a goat, never the prize.
-4. The host always offers the player the opportunity to switch.
-5. When the host has two valid goat doors available, this program chooses between them at random.
-
-Changing the host's behavior can change the probabilities.
-
 ## Build and run
 
 ### Linux and macOS
@@ -141,60 +101,6 @@ $env:NO_COLOR = "1"
 .\monty_hall.exe
 ```
 
-## Example
-
-```text
-How many games should each strategy play?
-Enter a number from 1 to 100,000,000: 1000000
-
-STRATEGY RESULTS
-
-  STAY WITH THE FIRST DOOR
-  Wins   : approximately 333,333
-  Losses : approximately 666,667
-
-  SWITCH TO THE OTHER DOOR
-  Wins   : approximately 666,667
-  Losses : approximately 333,333
-```
-
-The exact numbers change on every run because the doors and first choices are randomized.
-
-## Does this prove the result?
-
-Not by itself. A simulation provides **empirical evidence**, while the probability calculation provides the mathematical proof.
-
-However, simulation is particularly useful here because the correct result clashes so strongly with intuition. Watching the percentages repeatedly converge toward one-third and two-thirds makes the abstract explanation much easier to trust.
-
-## Technical details
-
-- Language: C11
-- Interface: terminal
-- Simulation type: Monte Carlo experiment
-- Random generator: SplitMix64, seeded at runtime
-- Maximum trials per strategy: 100,000,000
-- Dependencies: standard C library only
-- Supported environments: Linux, macOS, and modern Windows terminals
-
-SplitMix64 is used only to generate pseudorandom simulation values. It is not a cryptographic random-number generator.
-
 ## Background and sources
 
-The puzzle is modeled after the American television game show *Let's Make a Deal* and is named after its longtime host, Monty Hall. Statistician Steve Selvin presented the problem in game-show form in letters published in *The American Statistician* in 1975. It became widely known after Marilyn vos Savant answered a reader's version of the puzzle in her *Parade* column in 1990.
-
-The mathematical puzzle uses a precise host protocol. The real television show did not necessarily follow these exact rules in every situation.
-
-Further reading:
-
-- Steve Selvin, ["A Problem in Probability"](https://www.jstor.org/stable/2683689), *The American Statistician*, 1975
-- [Utah State University: The Monty Hall Problem](https://www.usu.edu/math/schneit/StatsHistory/ProbabilityPrompts/MontyHall)
-- [UC San Diego: The Monty Hall Page](https://math.ucsd.edu/~crypto/Monty/Montytitle.html)
-- [Parade: The Two Goats, Three Doors Question and Solution](https://parade.com/533284/npond/the-two-goats-three-doors-question-and-solution/)
-
-## Project structure
-
-```text
-monty-hall-simulator/
-├── monty_hall.c
-└── README.md
-```
+The puzzle is modeled after the American television game show *Let's Make a Deal* and is named after its longtime host, Monty Hall. Statistician Steve Selvin presented the problem in game-show form in letters published in [*The American Statistician*](https://www.jstor.org/stable/2683689) in 1975. It became widely known after Marilyn vos Savant answered a reader's version of the puzzle in her *Parade* column in 1990.
