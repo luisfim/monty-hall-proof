@@ -27,8 +27,6 @@ The question is:
 
 > Is it better to stay, switch, or does it make no difference?
 
-The correct strategy is to **switch**.
-
 ## Why switching works
 
 At the moment of the first choice, the player has:
