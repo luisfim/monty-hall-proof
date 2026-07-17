@@ -31,9 +31,7 @@ The question is:
 
 At the moment of the first choice, the player has:
 
-\[
-P(\text{first choice is correct}) = \frac{1}{3}
-\]
+\[P(\text{first choice is correct}) = \frac{1}{3}\]
 
 \[
 P(\text{first choice is wrong}) = \frac{2}{3}
