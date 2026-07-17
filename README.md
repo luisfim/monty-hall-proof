@@ -27,33 +27,22 @@ The question is:
 
 > Is it better to stay, switch, or does it make no difference?
 
-## Why switching works
-
-At the moment of the first choice, the player has:
-
-\[P(\text{first choice is correct}) = \frac{1}{3}\]
-
-\[
-P(\text{first choice is wrong}) = \frac{2}{3}
-\]
-
-The host's action does not make the original choice more likely to be correct. The original door still represents the initial \(1/3\) chance.
-
 ### Staying
 
 Staying wins only when the first random choice was already correct:
 
-\[
-P(\text{win by staying}) = \frac{1}{3}
-\]
+```text
+P(win by staying) = 1/3 = approximately 33.33%
+```
+
 
 ### Switching
 
 Switching wins whenever the first random choice was wrong. That happens for either of the two goat doors:
 
-\[
-P(\text{win by switching}) = \frac{2}{3}
-\]
+```text
+P(win by switching) = 2/3 = approximately 66.67%
+```
 
 | Initial choice | Probability | Stay | Switch |
 |---|---:|---:|---:|
