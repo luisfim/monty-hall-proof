@@ -4,7 +4,11 @@ A small terminal program written in C that uses randomized simulation to demonst
 
 ## Screenshot
 
-![Monty Hall Simulator terminal output](assets/screenshot.png)
+<p align="left">
+  <img src="assets/screenshot.png"
+       alt="Monty Hall Simulator terminal output"
+       width="650">
+</p>
 
 ## Why I built this
 
