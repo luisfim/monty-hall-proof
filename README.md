@@ -31,18 +31,13 @@ The question is:
 
 Staying wins only when the first random choice was already correct:
 
-```text
 P(win by staying) = 1/3 = approximately 33.33%
-```
-
 
 ### Switching
 
 Switching wins whenever the first random choice was wrong. That happens for either of the two goat doors:
 
-```text
 P(win by switching) = 2/3 = approximately 66.67%
-```
 
 | Initial choice | Probability | Stay | Switch |
 |---|---:|---:|---:|
