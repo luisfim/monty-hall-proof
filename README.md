@@ -4,9 +4,7 @@ A small terminal program written in C that uses randomized simulation to demonst
 
 ## Screenshot
 
-Add a screenshot of the terminal output to `assets/screenshot.png`, then uncomment the line below:
-
-<!-- ![Monty Hall Simulator terminal output](assets/screenshot.png) -->
+![Monty Hall Simulator terminal output](assets/screenshot.png)
 
 ## Why I built this
 
